@@ -99,7 +99,8 @@ A continuación se detallan los **campos que se extraen** de los artículos méd
 
 ---
 
-  ### 👨‍💻 Autor o Contribución
-  
-- **Autor:** Juan Pablo Arias Buitrago  
-- **Correo electrónico:** 📧 [ariasj.u@javeriana.edu.co](mailto:ariasj.u@javeriana.edu.co)
+### 👨‍💻 Autor
+
+**Juan Pablo Arias Buitrago**  
+Estudiante de Ciencia de Datos, **Pontificia Universidad Javeriana**  
+📧 [ariasj.u@javeriana.edu.co](mailto:ariasj.u@javeriana.edu.co)
