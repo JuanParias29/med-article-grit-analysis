@@ -1,118 +1,105 @@
-# fis_boilerplate
-## Descripción de cada directorio y archivos
-```bash
-project-name/
-├── .github/
-│   ├── ISSUE_TEMPLATE/
-│   │   ├── bug_report.md
-│   │   ├── feature_request.md
-│   ├── PULL_REQUEST_TEMPLATE.md
-│   └── workflows/
-│       ├── ci.yml
-│       └── cd.yml
-├── conf/
-│   ├── config.yaml
-│   └── settings.json
-├── docs/
-│   ├── api/
-│   ├── architecture/
-│   └── user_guide/
-├── jupyter/
-│   ├── notebooks/
-│   │   ├── exploration.ipynb
-│   │   └── analysis.ipynb
-│   └── datasets/
-│       ├── data1.csv
-│       └── data2.csv
-├── scripts/
-│   ├── setup.sh
-│   ├── deploy.sh
-│   └── test.sh
-├── src/
-│   ├── main/
-│   │   ├── java/ (o python/, etc. según el lenguaje)
-│   │   └── resources/
-│   ├── test/
-│   │   ├── java/ (o python/, etc. según el lenguaje)
-│   │   └── resources/
-├── temp/
-│   ├── temp_file.txt
-│   └── temp_data/
-│       ├── temp1.tmp
-│       └── temp2.tmp
-├── .gitignore
+# med-article-grit-analysis 🚀
+
+**Objetivo:**  
+Este proyecto tiene como objetivo desarrollar un sistema automatizado para la extracción de información relevante de artículos y papers médicos mediante web scraping. La información extraída será procesada y analizada por Modelos de Lenguaje de Gran Escala (LLMs), los cuales interpretarán y clasificarán los datos según categorías específicas relacionadas con el concepto de "grit" en contextos médicos y académicos.
+
+---
+
+## 📁 Estructura del Proyecto
+
+```plaintext
+med-article-grit-analysis/
+│
+├── 🧑‍💻 scraper/                      # Scripts de web scraping
+├── 🧠 llms_analysis/                # Análisis mediante LLMs
+├── 📊 output/                       # Carpeta de salida con hojas de cálculo generadas
 ├── README.md
-├── LICENSE
-├── CHANGELOG.md
-├── CONTRIBUTING.md
-├── Dockerfile
-├── docker-compose.yml
-└── Makefile
+└── LICENSE
+## 📝 Campos Extraídos del Artículo
 ```
 
+A continuación se detallan los **campos que se extraen** de los artículos médicos, organizados por categorías relevantes:
 
-### .github/
-Contiene configuraciones específicas para GitHub, como plantillas para problemas (issues) y solicitudes de extracción (pull requests), y flujos de trabajo de GitHub Actions para integración continua (CI) y despliegue continuo (CD).
+---
 
-- `ISSUE_TEMPLATE/`: Plantillas para reportar bugs y solicitar nuevas características.
-- `workflows/`: Archivos YAML para definir los flujos de trabajo de CI/CD.
+### 1. Información General del Artículo 📄
 
-### docs/
-Documentación del proyecto.
+- **Article ID**  
+  _Descripción:_ Identificador único del artículo extraído.
 
-- `api/`: Documentación de la API.
-- `architecture/`: Diagramas y documentación de la arquitectura.
-- `user_guide/`: Guías para usuarios.
+- **Article Title**  
+  _Descripción:_ Título del artículo o estudio médico.
 
-### src/
-Código fuente del proyecto.
+- **Authors**  
+  _Descripción:_ Nombres de los autores del artículo, separados por comas.
 
-- `main/`: Código fuente principal.
-  - `java/` (o `python/`, etc.): Código fuente del proyecto según el lenguaje utilizado.
-  - `resources/`: Archivos de recursos como configuraciones y otros archivos necesarios.
-- `test/`: Código de pruebas.
-  - `java/` (o `python/`, etc.): Código de pruebas unitarias y de integración.
-  - `resources/`: Archivos de recursos para las pruebas.
+---
 
-### scripts/
-Scripts útiles para tareas comunes como configuración, despliegue y pruebas.
+### 2. Características del Estudio 🧑‍🔬
 
-- `setup.sh`: Script para configurar el entorno de desarrollo.
-- `deploy.sh`: Script para despliegue.
-- `test.sh`: Script para ejecutar pruebas.
+- **Study Population**  
+  _Descripción:_ Población estudiada en el artículo, como profesionales de salud, estudiantes de medicina o enfermería, entre otros.
 
-### conf/
-Carpeta para archivos de configuración.
+- **Sample**  
+  _Descripción:_ Número de participantes en el estudio.
 
-- `config.yaml`: Archivo de configuración en formato YAML.
-- `settings.json`: Archivo de configuración en formato JSON.
+- **Context**  
+  _Descripción:_ Contexto del estudio (académico, clínico, ambos).
 
-### jupyter/
-Carpeta para los notebooks de Jupyter y datasets utilizados.
+---
 
-- `notebooks/`: Carpeta para los notebooks de Jupyter.
-  - `exploration.ipynb`: Notebook para la exploración de datos.
-  - `analysis.ipynb`: Notebook para el análisis de datos.
-- `datasets/`: Carpeta para los datasets utilizados en los notebooks.
-  - `data1.csv`: Ejemplo de dataset en formato CSV.
-  - `data2.csv`: Otro ejemplo de dataset en formato CSV.
+### 3. Grit y su Medición 💪
 
-### temp/
-Carpeta para archivos temporales.
+- **Grit Definition Used**  
+  _Descripción:_ Definición de "grit" utilizada en el artículo.
 
-- `temp_file.txt`: Archivo temporal de ejemplo.
-- `temp_data/`: Subcarpeta para datos temporales.
-  - `temp1.tmp`: Archivo temporal de ejemplo.
-  - `temp2.tmp`: Otro archivo temporal de ejemplo.
+- **Grit Measurement Instrument**  
+  _Descripción:_ Herramienta o instrumento utilizado para medir "grit", por ejemplo, el "Duckworth Grit Scale (DGS)", entre otros.
 
-### Archivos en la raíz del proyecto
+- **Determining Factors of Grit**  
+  _Descripción:_ Factores que determinan el nivel de "grit" según el artículo, como la edad, experiencia, ambiente de trabajo, etc.
 
-- `.gitignore`: Archivo para especificar qué archivos y directorios deben ser ignorados por Git.
-- `README.md`: Descripción general del proyecto, instrucciones de instalación, uso, contribución, etc.
-- `LICENSE`: Información sobre la licencia del proyecto.
-- `CHANGELOG.md`: Registro de cambios en el proyecto.
-- `CONTRIBUTING.md`: Guía para contribuir al proyecto.
-- `Dockerfile`: Archivo para construir la imagen Docker del proyecto.
-- `docker-compose.yml`: Archivo de configuración para Docker Compose.
-- `Makefile`: Archivo para automatizar tareas mediante comandos `make`.
+- **Evidence of Change in Grit**  
+  _Descripción:_ Evidencia de si el nivel de "grit" cambia a lo largo del tiempo o si se mantiene constante (estático vs. dinámico).
 
+---
+
+### 4. Intervenciones y Resultados 🎯
+
+- **Educational or Training Interventions Related to Grit**  
+  _Descripción:_ Intervenciones educativas o de formación relacionadas con "grit" (si aplica).
+
+- **Academic Performance Indicators and Results Associated with Grit**  
+  _Descripción:_ Indicadores de rendimiento académico asociados con "grit" y sus resultados.
+
+- **Professional Performance Indicators and Results Associated with Grit**  
+  _Descripción:_ Indicadores de rendimiento profesional asociados con "grit" y sus resultados.
+
+- **Other Relevant Outcomes**  
+  _Descripción:_ Otros resultados relevantes que el artículo relaciona con "grit", tales como bienestar, resiliencia, satisfacción laboral, etc.
+
+---
+
+### 5. Análisis de Resultados y Conclusiones 🧐
+
+- **Limitations Reported**  
+  _Descripción:_ Limitaciones identificadas en el artículo, como el tamaño de la muestra, sesgos en los resultados, etc.
+
+- **Main Conclusions**  
+  _Descripción:_ Conclusiones principales del artículo respecto a "grit" y sus impactos.
+
+- **Gaps Identified in the Literature**  
+  _Descripción:_ Huecos identificados en la literatura actual sobre "grit" y áreas donde se necesita más investigación.
+
+- **Implications for Practice**  
+  _Descripción:_ Implicaciones del estudio para la práctica profesional, como la implementación de estrategias basadas en "grit" en el ámbito médico.
+
+- **Recommendations for Future Research**  
+  _Descripción:_ Recomendaciones para futuras investigaciones sobre el tema de "grit", como estudios longitudinales o en diferentes poblaciones.
+
+---
+
+  ### 👨‍💻 Autor o Contribución
+  
+- **Autor:** Juan Pablo Arias Buitrago  
+- **Correo electrónico:** 📧 [ariasj.u@javeriana.edu.co](mailto:ariasj.u@javeriana.edu.co)
