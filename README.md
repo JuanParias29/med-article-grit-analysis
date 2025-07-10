@@ -10,9 +10,9 @@ Este proyecto tiene como objetivo desarrollar un sistema automatizado para la ex
 ```plaintext
 med-article-grit-analysis/
 │
-├── 🧑‍💻 scraper/                      # Scripts de web scraping
 ├── 🧠 llms_analysis/                # Análisis mediante LLMs
 ├── 📊 output/                       # Carpeta de salida con hojas de cálculo generadas
+├── 🧑‍💻 scraper/                      # Scripts de web scraping
 ├── README.md
 └── LICENSE
 ## 📝 Campos Extraídos del Artículo
